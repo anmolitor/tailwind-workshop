@@ -204,3 +204,30 @@ TailwindCSS braucht etwas Gewöhnung aber bringt Vorteile:
 ---
 
 ## Let's try it out!
+
+---
+
+## Project Setup
+
+- TailwindCSS v3 ist ein PostCSS Plugin
+- Vite hat PostCSS automatisch integriert
+- Für Webpack gibt es "postcss-loader"
+- Minimale index.css um Tailwind einzubinden
+- Prettier Plugin sorgt für konsistente Klassen Reihenfolge
+
+---
+
+## Ausblick auf Tailwind v4
+
+- Alpha ist verfügbar
+- Engine Rewrite in Rust
+- Unified Toolchain statt (nur) PostCSS plugin
+- Unterstützung für CSS Container-Queries
+- Zero Config Content Detection
+- Config über CSS Variablen statt .config.js Datei
+
+---
+
+## Feedback Runde
+
+
