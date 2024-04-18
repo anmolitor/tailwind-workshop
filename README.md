@@ -7,32 +7,15 @@ VSCode:
 - Extensions installieren:
   - bradlc.vscode-tailwindcss
   - esbenp.prettier-vscode
+- index.html öffnen und Aufgaben bearbeiten (Nummeriert von (1) - ...)
 
 Intellij Ultimate:
 
 - Tailwind Extension sollte schon vorinstalliert sein
 - Prettier Extension ggf installieren und für html anschalten
+- index.html öffnen und Aufgaben bearbeiten (Nummeriert von (1) - ...)
 
 Im Browser:
 
-- https://play.tailwindcss.com/HxCMQmEdRy
+- https://play.tailwindcss.com/e9oCDNsnY8
 
-## Aufgaben
-
-### Einfach
-
-1.
-2.
-
-### Mittel
-
-1. Hover Effekt auf "Reservieren" Button
-2.
-3. Limitiere das Color Scheme auf die bisher genutzten Farben
-4. Füge eine neue rounded Class ein um die Styles zu vereinheitlichen
-5. Mache die Website responsiv
-
-### Schwer
-
-1. Füge der Website einen Dark-Mode hinzu
-2. CSS-Only Accordion (?)
