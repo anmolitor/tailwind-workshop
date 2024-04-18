@@ -1,9 +1,9 @@
 /* @theme andrena-theme */
 
-@import "default";
+@import 'default';
 
 section {
-  background-image: url("./theme/background-slide.png");
-  background-repeat: no-repeat;
-  background-size: contain;
+	background-image: url('./theme/background-slide.png');
+	background-repeat: no-repeat;
+	background-size: contain;
 }

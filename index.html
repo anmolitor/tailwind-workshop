@@ -1,156 +1,212 @@
 <!doctype html>
 <html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="./index.css" />
+		<link rel="icon" type="image/png" href="/favicon-32x32.png" />
+	</head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="./index.css" />
-  <link rel="icon" type="image/png" href="/favicon-32x32.png">
-</head>
-
-<body>
-  <!-- (13) Die Website soll einen Dark-Mode bekommen. Was nutzt Tailwind standardmäßig um zu entscheiden
+	<body>
+		<!-- (13) Die Website soll einen Dark-Mode bekommen. Was nutzt Tailwind standardmäßig um zu entscheiden
      ob die Website in light oder dark mode angezeigt wird? Kannst du die Konfiguration anpassen damit der Button in der Navbar funktioniert?  -->
-  <header class="text-gray-800">
-    <!-- (16) Die Navbar soll in Mobile verschwinden und nur angezeigt werden, wenn das Website Logo geclickt wird. Sie soll von der Seite reinsliden -->
-    <nav class="w-full">
-      <!-- (1) Die Navigation sollte sticky sein. Aktuell verschwindet sie beim Scrollen nach unten. -->
-      <ul class="flex items-center justify-end gap-4 bg-gray-200/50 h-20">
-        <!-- (9) Probiere die Seite mit der Tastatur zu bedienen. Der Hover Effekt soll auch passieren wenn dieses Element mit der Tastatur selektiert wird. -->
-        <li class="mr-auto px-4 hover:bg-gray-300/50">
-          <a href="/" class="flex items-center gap-2 font-thin">
-            <img class="block"
-              src="https://www.flaticon.com/svg/vstatic/svg/3916/3916979.svg?token=exp=1713184338~hmac=488f8d14414c0db44770df1eb5eda1ea"
-              width="40px" height="40px" />
-            Travel-R
-          </a>
-        </li>
-        <!-- (2) Die Hover Effekte (und die Links) auf den Nav Elementen sollten die gesamte Höhe der Navigationsleiste abdecken -->
-        <li>
-          <button 
-    onclick="(() => document.body.classList.toggle('dark'))()" 
-    class="h-full w-12 p-2 text-gray-500 hover:bg-gray-300/50"
->
-    <svg class="fill-blue-700 block dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-    <svg class="fill-yellow-500 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-</button>
-        </li>
-        <li><a href="/ziele" class="px-4 flex items-center hover:bg-gray-300/50">Ziele</a></li>
-        <li><a href="/reisen" class="px-4 flex items-center hover:bg-gray-300/50">Reisen</a></li>
-        <li> <a href="/specials" class="px-4 flex items-center hover:bg-gray-300/50">Specials</a>
-        </li>
-        <li><a href="/wohnungen" class="px-4 flex items-center hover:bg-gray-300/50">Wohnungen</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <div class="fixed left-0 top-0 -z-10 w-screen">
-    <!-- (14) Auch hier den Dark Mode nicht vergessen :) -->
-    <div
-      style='background: url("https://images.unsplash.com/photo-1602002418816-5c0aeef426aa?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center bottom / cover no-repeat;'
-      class="after:content-[&quot;&quot;] h-[40vh] max-h-[861px] w-full transition-[background,height] after:absolute after:inset-0 after:!block after:h-full after:w-full after:bg-gradient-to-b after:from-transparent after:from-[75%] after:to-white after:to-[90%] lg:h-screen lg:after:from-[60%] lg:after:to-[80%]">
-    </div>
-  </div>
-  <!-- (5) Die gesamte Seite sollte einen Gradient als Hintergrund haben. Der Gradient soll sich an den Farben des Bilds orientieren.
+		<header class="text-gray-800">
+			<!-- (16) Die Navbar soll in Mobile verschwinden und nur angezeigt werden, wenn das Website Logo geclickt wird. Sie soll von der Seite reinsliden -->
+			<nav class="w-full">
+				<!-- (1) Die Navigation sollte sticky sein. Aktuell verschwindet sie beim Scrollen nach unten. -->
+				<ul class="flex h-20 items-center justify-end gap-4 bg-gray-200/50">
+					<!-- (9) Probiere die Seite mit der Tastatur zu bedienen. Der Hover Effekt soll auch passieren wenn dieses Element mit der Tastatur selektiert wird. -->
+					<li class="mr-auto px-4 hover:bg-gray-300/50">
+						<a href="/" class="flex items-center gap-2 font-thin">
+							<img
+								class="block"
+								src="https://www.flaticon.com/svg/vstatic/svg/3916/3916979.svg?token=exp=1713184338~hmac=488f8d14414c0db44770df1eb5eda1ea"
+								width="40px"
+								height="40px"
+							/>
+							Travel-R
+						</a>
+					</li>
+					<!-- (2) Die Hover Effekte (und die Links) auf den Nav Elementen sollten die gesamte Höhe der Navigationsleiste abdecken -->
+					<li>
+						<button
+							onclick="(() => document.body.classList.toggle('dark'))()"
+							class="h-full w-12 p-2 text-gray-500 hover:bg-gray-300/50"
+						>
+							<svg class="block fill-blue-700 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+								<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+							</svg>
+							<svg
+								class="hidden fill-yellow-500 dark:block"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+							>
+								<path
+									d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+								></path>
+							</svg>
+						</button>
+					</li>
+					<li><a href="/ziele" class="flex items-center px-4 hover:bg-gray-300/50">Ziele</a></li>
+					<li><a href="/reisen" class="flex items-center px-4 hover:bg-gray-300/50">Reisen</a></li>
+					<li>
+						<a href="/specials" class="flex items-center px-4 hover:bg-gray-300/50">Specials</a>
+					</li>
+					<li>
+						<a href="/wohnungen" class="flex items-center px-4 hover:bg-gray-300/50">Wohnungen</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div class="fixed left-0 top-0 -z-10 w-screen">
+			<!-- (14) Auch hier den Dark Mode nicht vergessen :) -->
+			<div
+				style="
+					background: url('https://images.unsplash.com/photo-1602002418816-5c0aeef426aa?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+						center bottom / cover no-repeat;
+				"
+				class="after:content-[&quot;&quot;] h-[40vh] max-h-[861px] w-full transition-[background,height] after:absolute after:inset-0 after:!block after:h-full after:w-full after:bg-gradient-to-b after:from-transparent after:from-[75%] after:to-white after:to-[90%] lg:h-screen lg:after:from-[60%] lg:after:to-[80%]"
+			></div>
+		</div>
+		<!-- (5) Die gesamte Seite sollte einen Gradient als Hintergrund haben. Der Gradient soll sich an den Farben des Bilds orientieren.
     Das Bild soll etwas durchscheinen.
   -->
-  <main
-    class="mt-[30%] flex flex-col items-center gap-4 text-gray-800 bg-white">
-    <div class="max-w-3xl flex flex-col gap-4">
-      <!-- (8) Die Überschrift ist nicht groß und fett genug. -->
-      <h1>Dein Urlaub in den Malediven</h1>
-      <div class="flex">
-        <div class="flex flex-col gap-4">
-          <input type="checkbox" id="teaser" class="appearance-none" />
-          <!-- (11) Der Text soll per Default auf 4 Zeilen begrenzt sein. -->
-          <!-- (12) Nutze peer Modifier um den Text auszuklappen wenn die (unsichtbare) Checkbox getriggert wird. -->
-          <label for="teaser">Ein
-            Traumziel für viele Reisende sind die Malediven, ein atemberaubendes Archipel im Indischen Ozean. Ein
-            Urlaub auf den Malediven verspricht paradiesische Strände, kristallklares Wasser und eine entspannte
-            Atmosphäre, die jeden Besucher verzaubert. Die Malediven bestehen aus über 1.000 Koralleninseln, von denen
-            viele unbewohnt sind und nur darauf warten, von neugierigen Entdeckern erkundet zu werden. Die Inseln, die
-            für
-            den Tourismus geöffnet sind, bieten Luxusresorts und Hotels, die direkt am weißen Sandstrand liegen und
-            einen
-            spektakulären Blick auf das türkisfarbene Meer bieten. Wassersportler finden auf den Malediven ein wahres
-            Paradies. Schnorcheln und Tauchen gehören zu den beliebtesten Aktivitäten, um die faszinierende
-            Unterwasserwelt mit bunten Korallenriffen, exotischen Fischen und vielleicht sogar mit Mantarochen und
-            Walhaien zu erkunden. Für diejenigen, die lieber an Land bleiben möchten, bieten die Malediven auch eine
-            Vielzahl von Möglichkeiten zur Entspannung und Erholung. Entspannen Sie sich bei einer Massage am Strand,
-            genießen Sie ein romantisches Dinner bei Sonnenuntergang oder machen Sie einen Spaziergang entlang des
-            Strandes und lassen Sie sich von der Schönheit der Natur verzaubern. Ein Urlaub auf den Malediven ist nicht
-            nur eine Reise an einen exotischen Ort, sondern auch eine Gelegenheit, dem Alltag zu entfliehen, die
-            Batterien
-            wieder aufzuladen und unvergessliche Erinnerungen zu sammeln. Es ist kein Wunder, dass die Malediven als
-            eines
-            der romantischsten und luxuriösesten Reiseziele der Welt gelten.</label>
-        </div>
-      </div>
-      <h2 class="text-2xl font-semibold">Angebote</h2>
-      <!-- (3) Die Angebote sollen eine andere Hintergrundfarbe bekommen als der Rest der Seite um sich abzuheben. -->
-      <!-- (4) Die Angebote sollen abgerundete Ecken haben für einen freundlicheren Look & Feel. -->
-      <!-- (7) Die Angebote heben sich noch nicht genug ab. Sie sollen einen Pop-Out Effekt bekommen in dem sie einen Schatten werfen. -->
-      <ol class="flex flex-wrap gap-4">
-        <!-- (10) Das Angebot sieht nicht gut auf kleineren Bildschirmen aus. Kannst du das etwas optimieren? -->
-        <li
-          class="flex flex-row min-h-64 w-full gap-4 p-2">
-          <img
-            src="https://images.unsplash.com/photo-1658218729615-167c32d70537?q=80&w=2669&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            width="400px" />
-          <div class="flex flex-col gap-2">
-            <h3 class="mb-2 border-b-2 border-gray-200 py-2 text-lg">Ferienhaus im Center von Malé</h3>
-            <div class="flex items-center gap-2"><span class="rounded-lg bg-green-600 px-2 text-white">6.9</span>
-              <!-- (6) Der "Befriedigend" Text soll eine gelbe Farbe haben. -->
-              Befriedigend - 420 Bewertungen</div>
-            <div class="flex flex-wrap gap-2 text-sm">
-              <div class="flex gap-2 rounded-lg border-2 border-black px-4 py-2 shadow-md shadow-gray-400">
-                <img src="https://cdn-icons-png.flaticon.com/512/2425/2425854.png" width="20px" height="20px" />
-                2 Bathrooms
-              </div>
-              <div class="flex gap-2 rounded-lg border-2 border-black px-4 py-2 shadow-md shadow-gray-400">
-                <img src="https://cdn-icons-png.flaticon.com/512/7118/7118098.png" width="20px" height="20px" />
-                5 Beds
-              </div>
-              <div class="flex gap-2 rounded-lg border-2 border-black px-4 py-2 shadow-md shadow-gray-400"><img
-                  src="https://cdn-icons-png.flaticon.com/512/1040/1040005.png" width="20px" height="20px" />&lt;8</div>
-              <div class="flex gap-2 rounded-lg border-2 border-black px-4 py-2 shadow-md shadow-gray-400">
-                <img src="https://cdn-icons-png.flaticon.com/512/12806/12806434.png" width="20px" height="20px" />
-                WLAN
-              </div>
-            </div>
-            <button
-              class="mt-auto w-full rounded-lg bg-green-600 hover:bg-green-700 focus:bg-green-800 py-2 font-semibold text-white">Reservieren</button>
-          </div>
-        </li>
-      </ol>
-  </main>
-  </div>
-  <!-- (15) Der Footer soll responsiv sein. Was für Varianten fallen dir hier ein? -->
-  <footer class="w-full flex justify-between border-t-2 p-8 border-gray-400 bg-gray-200/50 divide-x-2 text-gray-800">
-    <a href="/" class="flex items-center gap-2 font-thin w-1/3 justify-center">
-      <img class="block"
-        src="https://www.flaticon.com/svg/vstatic/svg/3916/3916979.svg?token=exp=1713184338~hmac=488f8d14414c0db44770df1eb5eda1ea"
-        width="50px" height="50px" />
-      Travel-R
-    </a>
-    <div class="w-1/3 flex flex-col items-center border-gray-400">
-      <ul>
-        <li><a href="/faqs">FAQs</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/kontakt">Kontakt</a></li>
-        <li><a href="/bedingungen">Geschäftsbedingungen</a></li>
-      </ul>
-    </div>
-    <div class="w-1/3 flex flex-col items-center border-gray-400">
-      <ul>
-        <li><a href="/sponsoring">Sponsoring</a></li>
-        <li><a href="/karriere">Karriere</a></li>
-      </ul>
-    </div>
-  </footer>
-</body>
+		<main class="mt-[30%] flex flex-col items-center gap-4 bg-white text-gray-800">
+			<div class="flex max-w-3xl flex-col gap-4">
+				<!-- (8) Die Überschrift ist nicht groß und fett genug. -->
+				<h1>Dein Urlaub in den Malediven</h1>
+				<div class="flex">
+					<div class="flex flex-col gap-4">
+						<input type="checkbox" id="teaser" class="appearance-none" />
+						<!-- (11) Der Text soll per Default auf 4 Zeilen begrenzt sein. -->
+						<!-- (12) Nutze peer Modifier um den Text auszuklappen wenn die (unsichtbare) Checkbox getriggert wird. -->
+						<label for="teaser"
+							>Ein Traumziel für viele Reisende sind die Malediven, ein atemberaubendes Archipel im
+							Indischen Ozean. Ein Urlaub auf den Malediven verspricht paradiesische Strände,
+							kristallklares Wasser und eine entspannte Atmosphäre, die jeden Besucher verzaubert.
+							Die Malediven bestehen aus über 1.000 Koralleninseln, von denen viele unbewohnt sind
+							und nur darauf warten, von neugierigen Entdeckern erkundet zu werden. Die Inseln, die
+							für den Tourismus geöffnet sind, bieten Luxusresorts und Hotels, die direkt am weißen
+							Sandstrand liegen und einen spektakulären Blick auf das türkisfarbene Meer bieten.
+							Wassersportler finden auf den Malediven ein wahres Paradies. Schnorcheln und Tauchen
+							gehören zu den beliebtesten Aktivitäten, um die faszinierende Unterwasserwelt mit
+							bunten Korallenriffen, exotischen Fischen und vielleicht sogar mit Mantarochen und
+							Walhaien zu erkunden. Für diejenigen, die lieber an Land bleiben möchten, bieten die
+							Malediven auch eine Vielzahl von Möglichkeiten zur Entspannung und Erholung.
+							Entspannen Sie sich bei einer Massage am Strand, genießen Sie ein romantisches Dinner
+							bei Sonnenuntergang oder machen Sie einen Spaziergang entlang des Strandes und lassen
+							Sie sich von der Schönheit der Natur verzaubern. Ein Urlaub auf den Malediven ist
+							nicht nur eine Reise an einen exotischen Ort, sondern auch eine Gelegenheit, dem
+							Alltag zu entfliehen, die Batterien wieder aufzuladen und unvergessliche Erinnerungen
+							zu sammeln. Es ist kein Wunder, dass die Malediven als eines der romantischsten und
+							luxuriösesten Reiseziele der Welt gelten.</label
+						>
+					</div>
+				</div>
+				<h2 class="text-2xl font-semibold">Angebote</h2>
+				<!-- (3) Die Angebote sollen eine andere Hintergrundfarbe bekommen als der Rest der Seite um sich abzuheben. -->
+				<!-- (4) Die Angebote sollen abgerundete Ecken haben für einen freundlicheren Look & Feel. -->
+				<!-- (7) Die Angebote heben sich noch nicht genug ab. Sie sollen einen Pop-Out Effekt bekommen in dem sie einen Schatten werfen. -->
+				<ol class="flex flex-wrap gap-4">
+					<!-- (10) Das Angebot sieht nicht gut auf kleineren Bildschirmen aus. Kannst du das etwas optimieren? -->
+					<li class="flex min-h-64 w-full flex-row gap-4 p-2">
+						<img
+							src="https://images.unsplash.com/photo-1658218729615-167c32d70537?q=80&w=2669&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+							width="400px"
+						/>
+						<div class="flex flex-col gap-2">
+							<h3 class="mb-2 border-b-2 border-gray-200 py-2 text-lg">
+								Ferienhaus im Center von Malé
+							</h3>
+							<div class="flex items-center gap-2">
+								<span class="rounded-lg bg-green-600 px-2 text-white">6.9</span>
+								<!-- (6) Der "Befriedigend" Text soll eine gelbe Farbe haben. -->
+								Befriedigend - 420 Bewertungen
+							</div>
+							<div class="flex flex-wrap gap-2 text-sm">
+								<div
+									class="flex gap-2 rounded-lg border-2 border-black px-4 py-2 shadow-md shadow-gray-400"
+								>
+									<img
+										src="https://cdn-icons-png.flaticon.com/512/2425/2425854.png"
+										width="20px"
+										height="20px"
+									/>
+									2 Bathrooms
+								</div>
+								<div
+									class="flex gap-2 rounded-lg border-2 border-black px-4 py-2 shadow-md shadow-gray-400"
+								>
+									<img
+										src="https://cdn-icons-png.flaticon.com/512/7118/7118098.png"
+										width="20px"
+										height="20px"
+									/>
+									5 Beds
+								</div>
+								<div
+									class="flex gap-2 rounded-lg border-2 border-black px-4 py-2 shadow-md shadow-gray-400"
+								>
+									<img
+										src="https://cdn-icons-png.flaticon.com/512/1040/1040005.png"
+										width="20px"
+										height="20px"
+									/>&lt;8
+								</div>
+								<div
+									class="flex gap-2 rounded-lg border-2 border-black px-4 py-2 shadow-md shadow-gray-400"
+								>
+									<img
+										src="https://cdn-icons-png.flaticon.com/512/12806/12806434.png"
+										width="20px"
+										height="20px"
+									/>
+									WLAN
+								</div>
+							</div>
+							<button
+								class="mt-auto w-full rounded-lg bg-green-600 py-2 font-semibold text-white hover:bg-green-700 focus:bg-green-800"
+							>
+								Reservieren
+							</button>
+						</div>
+					</li>
+				</ol>
+			</div>
+		</main>
+		<!-- (15) Der Footer soll responsiv sein. Was für Varianten fallen dir hier ein? -->
+		<footer
+			class="flex w-full justify-between divide-x-2 border-t-2 border-gray-400 bg-gray-200/50 p-8 text-gray-800"
+		>
+			<a href="/" class="flex w-1/3 items-center justify-center gap-2 font-thin">
+				<img
+					class="block"
+					src="https://www.flaticon.com/svg/vstatic/svg/3916/3916979.svg?token=exp=1713184338~hmac=488f8d14414c0db44770df1eb5eda1ea"
+					width="50px"
+					height="50px"
+				/>
+				Travel-R
+			</a>
+			<div class="flex w-1/3 flex-col items-center border-gray-400">
+				<ul>
+					<li><a href="/faqs">FAQs</a></li>
+					<li><a href="/blog">Blog</a></li>
+					<li><a href="/kontakt">Kontakt</a></li>
+					<li><a href="/bedingungen">Geschäftsbedingungen</a></li>
+				</ul>
+			</div>
+			<div class="flex w-1/3 flex-col items-center border-gray-400">
+				<ul>
+					<li><a href="/sponsoring">Sponsoring</a></li>
+					<li><a href="/karriere">Karriere</a></li>
+				</ul>
+			</div>
+		</footer>
+	</body>
 
-<!-- 
+	<!-- 
   Tipps
 
   Suche nach der Nummer deiner Aufgabe.
@@ -214,7 +270,4 @@
 
   (16) https://tailwindcss.com/docs/transition-property für die Animation
        Entscheide ob du die Navbar duplizieren willst. Möglicherweise ist das Problem auch mit dem existierenden HTML und Responsive Selektoren lösbar. Für die Click Logik kannst du die Input Technik des aufklappenden Textes nutzen (peer-Selektoren)   
--->
-
-
-</html>
+--></html>

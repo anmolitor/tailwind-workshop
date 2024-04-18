@@ -6,6 +6,7 @@ paginate: true
 
 <!-- _backgroundImage: url('./theme/background.png') -->
 <!-- _backgroundPosition: auto -->
+
 # TailwindCSS
 
 ---
@@ -34,12 +35,14 @@ paginate: true
 ## Wie sieht das Framework aus?
 
 ```html
-<div class="flex w-64 flex-col items-center gap-2 rounded-lg bg-amber-500 p-4 shadow-md shadow-gray-600 hover:bg-amber-600 hover:shadow-xl hover:shadow-gray-600">
-    <h2 class="w-full text-center border-b-2 border-solid border-amber-700">Name</h2>
-    <div class="relative h-[100px] w-[100px] overflow-hidden rounded-full border-4 border-amber-700">
-        <img src="./image.jpg" alt="" class="my-auto inline h-full w-auto bg-amber-200"/>
-    </div>
-    <p>Description</p>
+<div
+	class="flex w-64 flex-col items-center gap-2 rounded-lg bg-amber-500 p-4 shadow-md shadow-gray-600 hover:bg-amber-600 hover:shadow-xl hover:shadow-gray-600"
+>
+	<h2 class="w-full border-b-2 border-solid border-amber-700 text-center">Name</h2>
+	<div class="relative h-[100px] w-[100px] overflow-hidden rounded-full border-4 border-amber-700">
+		<img src="./image.jpg" alt="" class="my-auto inline h-full w-auto bg-amber-200" />
+	</div>
+	<p>Description</p>
 </div>
 ```
 
@@ -51,7 +54,7 @@ paginate: true
 
 ---
 
-## Tailwinds Statement 
+## Tailwinds Statement
 
 > I’ve written a few thousand words on why traditional “semantic class names” are the reason CSS is hard to maintain, but the truth is you’re never going to believe me until you actually try it. If you can suppress the urge to retch long enough to give it a chance, I really think you’ll wonder how you ever worked with CSS any other way.
 >
@@ -67,54 +70,63 @@ Das vorige HTML/CSS im "semantic CSS" Stil:
 
 ```html
 <div class="card-container">
-    <h2 class="card-headline">Name</h2>
-    <div class="card-image-wrapper">
-        <img src="./image.jpg" alt="" class="card-image" />
-    </div>
-    <p>Description</p>
+	<h2 class="card-headline">Name</h2>
+	<div class="card-image-wrapper">
+		<img src="./image.jpg" alt="" class="card-image" />
+	</div>
+	<p>Description</p>
 </div>
 ```
 
 ---
+
 <br>
 <br>
 Das zugehörige CSS
 
 ```css
 .card-container {
-    display: flex;
-    width: 16rem;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    border-radius: 0.5rem;
-    background-color: rgb(245 158 11);
-    padding: 1rem;
-    box-shadow: 0 0 #0000, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1), #4b5563;
+	display: flex;
+	width: 16rem;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+	border-radius: 0.5rem;
+	background-color: rgb(245 158 11);
+	padding: 1rem;
+	box-shadow:
+		0 0 #0000,
+		0 4px 6px -1px rgb(0 0 0 / 0.1),
+		0 2px 4px -2px rgb(0 0 0 / 0.1),
+		#4b5563;
 }
 .card-container:hover {
-    background-color: rgb(217 119 6);
-    box-shadow: 0 0 #0000, 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1), #4b5563;
+	background-color: rgb(217 119 6);
+	box-shadow:
+		0 0 #0000,
+		0 20px 25px -5px rgb(0 0 0 / 0.1),
+		0 8px 10px -6px rgb(0 0 0 / 0.1),
+		#4b5563;
 }
 .card-headline {
-    width: 100%;
-    text-align: center;
-    border-bottom: 2px solid rgb(180 83 9);
+	width: 100%;
+	text-align: center;
+	border-bottom: 2px solid rgb(180 83 9);
 }
 .card-image-wrapper {
-    position: relative;
-    height: 100px;
-    width: 100px;
-    overflow: hidden;
-    border-radius: 50%;
-    border: 4px solid rgb(180 83 9);
+	position: relative;
+	height: 100px;
+	width: 100px;
+	overflow: hidden;
+	border-radius: 50%;
+	border: 4px solid rgb(180 83 9);
 }
 .card-image {
-    margin: 0 auto;
-    display: inline;
-    height: 100%;
-    width: auto;
-    background-color: rgb(253 230 138);
+	margin: 0 auto;
+	display: inline;
+	height: 100%;
+	width: auto;
+	background-color: rgb(253 230 138);
 }
 ```
 
@@ -192,5 +204,3 @@ TailwindCSS braucht etwas Gewöhnung aber bringt Vorteile:
 ---
 
 ## Let's try it out!
-
-

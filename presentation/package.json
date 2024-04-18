@@ -1,14 +1,14 @@
 {
-  "name": "presentation",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "marp Presentation.md --html -o presentation.html --theme-set theme/andrena-theme.css"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@marp-team/marp-cli": "^3.4.0"
-  }
+	"name": "presentation",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "marp Presentation.md --html -o presentation.html --theme-set theme/andrena-theme.css"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@marp-team/marp-cli": "^3.4.0"
+	}
 }
