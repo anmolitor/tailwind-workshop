@@ -9,18 +9,24 @@
 </head>
 
 <body>
-  <header class="dark:text-white text-gray-800 dark:bg-gray-700">
-    <nav class="fixed left-0 top-0 w-full">
-      <ul class="flex items-center justify-end gap-4 bg-gray-200/50 dark:bg-gray-800/50 h-20">
-        <li class="mr-auto h-full px-4 hover:bg-gray-300/50">
-          <a href="/" class="flex items-center gap-2 font-thin h-full">
+  <!-- (13) Die Website soll einen Dark-Mode bekommen. Was nutzt Tailwind standardmäßig um zu entscheiden
+     ob die Website in light oder dark mode angezeigt wird? Kannst du die Konfiguration anpassen damit der Button in der Navbar funktioniert?  -->
+  <header class="text-gray-800">
+    <!-- (16) Die Navbar soll in Mobile verschwinden und nur angezeigt werden, wenn das Website Logo geclickt wird. Sie soll von der Seite reinsliden -->
+    <nav class="w-full">
+      <!-- (1) Die Navigation sollte sticky sein. Aktuell verschwindet sie beim Scrollen nach unten. -->
+      <ul class="flex items-center justify-end gap-4 bg-gray-200/50 h-20">
+        <!-- (9) Probiere die Seite mit der Tastatur zu bedienen. Der Hover Effekt soll auch passieren wenn dieses Element mit der Tastatur selektiert wird. -->
+        <li class="mr-auto px-4 hover:bg-gray-300/50">
+          <a href="/" class="flex items-center gap-2 font-thin">
             <img class="block"
               src="https://www.flaticon.com/svg/vstatic/svg/3916/3916979.svg?token=exp=1713184338~hmac=488f8d14414c0db44770df1eb5eda1ea"
               width="40px" height="40px" />
             Travel-R
           </a>
         </li>
-        <li class="h-full">
+        <!-- (2) Die Hover Effekte (und die Links) auf den Nav Elementen sollten die gesamte Höhe der Navigationsleiste abdecken -->
+        <li>
           <button 
     onclick="(() => document.body.classList.toggle('dark'))()" 
     class="h-full w-12 p-2 text-gray-500 hover:bg-gray-300/50"
@@ -29,31 +35,36 @@
     <svg class="fill-yellow-500 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
 </button>
         </li>
-        <li class="h-full"><a href="/ziele" class="px-4 h-full flex items-center hover:bg-gray-300/50">Ziele</a></li>
-        <li class="h-full"><a href="/reisen" class="px-4 h-full flex items-center hover:bg-gray-300/50">Reisen</a></li>
-        <li class="h-full"> <a href="/specials" class="px-4 h-full flex items-center hover:bg-gray-300/50">Specials</a>
+        <li><a href="/ziele" class="px-4 flex items-center hover:bg-gray-300/50">Ziele</a></li>
+        <li><a href="/reisen" class="px-4 flex items-center hover:bg-gray-300/50">Reisen</a></li>
+        <li> <a href="/specials" class="px-4 flex items-center hover:bg-gray-300/50">Specials</a>
         </li>
-        <li class="h-full"><a href="/wohnungen" class="px-4 h-full flex items-center hover:bg-gray-300/50">Wohnungen</a>
+        <li><a href="/wohnungen" class="px-4 flex items-center hover:bg-gray-300/50">Wohnungen</a>
         </li>
       </ul>
     </nav>
   </header>
   <div class="fixed left-0 top-0 -z-10 w-screen">
+    <!-- (14) Auch hier den Dark Mode nicht vergessen :) -->
     <div
       style='background: url("https://images.unsplash.com/photo-1602002418816-5c0aeef426aa?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center bottom / cover no-repeat;'
-      class="after:content-[&quot;&quot;] h-[40vh] max-h-[861px] w-full transition-[background,height] after:absolute after:inset-0 after:!block after:h-full after:w-full after:bg-gradient-to-b after:from-transparent after:from-[75%] after:to-white after:dark:to-gray-700 after:to-[90%] lg:h-screen lg:after:from-[60%] lg:after:to-[80%]">
+      class="after:content-[&quot;&quot;] h-[40vh] max-h-[861px] w-full transition-[background,height] after:absolute after:inset-0 after:!block after:h-full after:w-full after:bg-gradient-to-b after:from-transparent after:from-[75%] after:to-white after:to-[90%] lg:h-screen lg:after:from-[60%] lg:after:to-[80%]">
     </div>
   </div>
+  <!-- (5) Die gesamte Seite sollte einen Gradient als Hintergrund haben. Der Gradient soll sich an den Farben des Bilds orientieren.
+    Das Bild soll etwas durchscheinen.
+  -->
   <main
-    class="mt-[30%] flex flex-col items-center gap-4 bg-gradient-to-b to-transparent via-green-100/80 dark:via-green-900/80 p-8 from-amber-100/80 dark:from-amber-900/80 dark:text-white text-gray-800 dark:bg-gray-700">
+    class="mt-[30%] flex flex-col items-center gap-4 text-gray-800 bg-white">
     <div class="max-w-3xl flex flex-col gap-4">
-      <h1 class="text-4xl font-bold">Dein Urlaub in den Malediven</h1>
+      <!-- (8) Die Überschrift ist nicht groß und fett genug. -->
+      <h1>Dein Urlaub in den Malediven</h1>
       <div class="flex">
         <div class="flex flex-col gap-4">
-
-          <input type="checkbox" id="teaser" class="peer appearance-none" />
-          <label for="teaser"
-            class="cursor-pointer line-clamp-4 peer-checked:line-clamp-none transition-all max-h-24 peer-checked:max-h-max">Ein
+          <input type="checkbox" id="teaser" class="appearance-none" />
+          <!-- (11) Der Text soll per Default auf 4 Zeilen begrenzt sein. -->
+          <!-- (12) Nutze peer Modifier um den Text auszuklappen wenn die (unsichtbare) Checkbox getriggert wird. -->
+          <label for="teaser">Ein
             Traumziel für viele Reisende sind die Malediven, ein atemberaubendes Archipel im Indischen Ozean. Ein
             Urlaub auf den Malediven verspricht paradiesische Strände, kristallklares Wasser und eine entspannte
             Atmosphäre, die jeden Besucher verzaubert. Die Malediven bestehen aus über 1.000 Koralleninseln, von denen
@@ -76,16 +87,21 @@
         </div>
       </div>
       <h2 class="text-2xl font-semibold">Angebote</h2>
+      <!-- (3) Die Angebote sollen eine andere Hintergrundfarbe bekommen als der Rest der Seite um sich abzuheben. -->
+      <!-- (4) Die Angebote sollen abgerundete Ecken haben für einen freundlicheren Look & Feel. -->
+      <!-- (7) Die Angebote heben sich noch nicht genug ab. Sie sollen einen Pop-Out Effekt bekommen in dem sie einen Schatten werfen. -->
       <ol class="flex flex-wrap gap-4">
+        <!-- (10) Das Angebot sieht nicht gut auf kleineren Bildschirmen aus. Kannst du das etwas optimieren? -->
         <li
-          class="flex lg:flex-row flex-col min-h-64 w-full gap-4 rounded-lg border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 p-2 shadow-lg shadow-green-700/30">
+          class="flex flex-row min-h-64 w-full gap-4 p-2">
           <img
             src="https://images.unsplash.com/photo-1658218729615-167c32d70537?q=80&w=2669&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             width="400px" />
           <div class="flex flex-col gap-2">
             <h3 class="mb-2 border-b-2 border-gray-200 py-2 text-lg">Ferienhaus im Center von Malé</h3>
-            <div class="flex items-center gap-2"><span class="rounded-lg bg-green-600 px-2 text-white">6.9</span><span
-                class="text-yellow-500">Befriedigend</span> - 420 Bewertungen</div>
+            <div class="flex items-center gap-2"><span class="rounded-lg bg-green-600 px-2 text-white">6.9</span>
+              <!-- (6) Der "Befriedigend" Text soll eine gelbe Farbe haben. -->
+              Befriedigend - 420 Bewertungen</div>
             <div class="flex flex-wrap gap-2 text-sm">
               <div class="flex gap-2 rounded-lg border-2 border-black px-4 py-2 shadow-md shadow-gray-400">
                 <img src="https://cdn-icons-png.flaticon.com/512/2425/2425854.png" width="20px" height="20px" />
@@ -109,7 +125,8 @@
       </ol>
   </main>
   </div>
-  <footer class="w-full flex justify-between border-t-2 p-8 border-gray-400 bg-gray-200/50 divide-x-2 dark:text-white text-gray-800 dark:bg-gray-700">
+  <!-- (15) Der Footer soll responsiv sein. Was für Varianten fallen dir hier ein? -->
+  <footer class="w-full flex justify-between border-t-2 p-8 border-gray-400 bg-gray-200/50 divide-x-2 text-gray-800">
     <a href="/" class="flex items-center gap-2 font-thin w-1/3 justify-center">
       <img class="block"
         src="https://www.flaticon.com/svg/vstatic/svg/3916/3916979.svg?token=exp=1713184338~hmac=488f8d14414c0db44770df1eb5eda1ea"
@@ -132,5 +149,72 @@
     </div>
   </footer>
 </body>
+
+<!-- 
+  Tipps
+
+  Suche nach der Nummer deiner Aufgabe.
+  
+
+
+  (1) Das Hintergrundbild scheint sich schon korrekt zu verhalten. Wieso? Kannst du die gleiche Technik für die Navbar benutzen?
+
+
+  (2) Die Höhe der Elemente ist aktuell die des Inhalts. Versuche das Problem mit "h-..." Klassen zu lösen.
+      Wenn du andere Ideen hast: Probier es einfach aus :)
+      https://tailwindcss.com/docs/height
+
+
+  (3) https://tailwindcss.com/docs/background-color
+
+
+  (4) https://tailwindcss.com/docs/border-radius#rounded-corners
+
+
+  (5) Siehe https://tailwindcss.com/docs/gradient-color-stops
+      https://tailwindcss.com/docs/background-color#changing-the-opacity
+
+
+  (6) https://tailwindcss.com/docs/text-color
+
+
+  (7) https://tailwindcss.com/docs/box-shadow
+
+
+  (8) https://tailwindcss.com/docs/font-size
+
+
+  (9) https://tailwindcss.com/docs/hover-focus-and-other-states#focus
+
+
+  (10) https://tailwindcss.com/docs/responsive-design
+
+
+  (11) https://tailwindcss.com/docs/line-clamp
+
+
+  (12) https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-sibling-state
+
+
+  (13) https://tailwindcss.com/docs/dark-mode
+       In der tailwind-config die "darkMode" property setzen
+
+
+  (14) Modifier können genested werden in beliebiger Reihenfolge. after:dark und dark:after funktioniert beides. 
+  
+  (15) Eine Variante wäre die Dinge untereinander anzuzeigen. Die Reihenfolge sollte aber unterschiedlich sein, da das Firmenlogo nicht als erstes sondern als letztes angezeigt werden soll. Außerdem soll die Mitte als erstes angezeigt werden. Also statt
+
+    A B C
+
+    B
+    C
+    A
+
+    https://tailwindcss.com/docs/order https://tailwindcss.com/docs/responsive-design
+
+  (16) https://tailwindcss.com/docs/transition-property für die Animation
+       Entscheide ob du die Navbar duplizieren willst. Möglicherweise ist das Problem auch mit dem existierenden HTML und Responsive Selektoren lösbar. Für die Click Logik kannst du die Input Technik des aufklappenden Textes nutzen (peer-Selektoren)   
+-->
+
 
 </html>
