@@ -165,8 +165,7 @@ TailwindCSS braucht etwas Gewöhnung aber bringt Vorteile:
         <li>Inkonsistentes Design</li>
     </ul>
     <div style="width: 5%">
-        <div>↘</div>
-        <div>↗</div>
+        <div>→</div>
     </div>
     <span style="width: 55%">Raw CSS oder Framework-spezifische Lösung</span>
 </div> 
@@ -178,9 +177,7 @@ TailwindCSS braucht etwas Gewöhnung aber bringt Vorteile:
         <li>Keine Lust auf CSS</li>
     </ul>
     <div style="width: 5%">
-        <div>↘</div>
         <div>→</div>
-        <div>↗</div>
     </div>
     <span style="width: 55%">Component Library (Bootstrap/Material UI)</span>
 </div> 
