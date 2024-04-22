@@ -13,7 +13,7 @@
 		<header class="text-gray-800">
 			<!-- (16) Die Navbar soll in Mobile verschwinden und nur angezeigt werden, wenn das Website Logo geclickt wird. Sie soll von der Seite reinsliden -->
 			<nav class="w-full">
-				<!-- (1) Die Navigation sollte sticky sein. Aktuell verschwindet sie beim Scrollen nach unten. -->
+				<!-- (8) Die Navigation sollte sticky sein. Aktuell verschwindet sie beim Scrollen nach unten. -->
 				<ul class="flex h-20 items-center justify-end gap-4 bg-gray-200/50">
 					<!-- (9) Probiere die Seite mit der Tastatur zu bedienen. Der Hover Effekt soll auch passieren wenn dieses Element mit der Tastatur selektiert wird. -->
 					<li class="mr-auto px-4 hover:bg-gray-300/50">
@@ -27,7 +27,7 @@
 							Travel-R
 						</a>
 					</li>
-					<!-- (2) Die Hover Effekte (und die Links) auf den Nav Elementen sollten die gesamte Höhe der Navigationsleiste abdecken -->
+					<!-- (4) Die Hover Effekte (und die Links) auf den Nav Elementen sollten die gesamte Höhe der Navigationsleiste abdecken -->
 					<li>
 						<button
 							onclick="(() => document.body.classList.toggle('dark'))()"
@@ -75,7 +75,7 @@
   -->
 		<main class="mt-[30%] flex flex-col items-center gap-4 bg-white text-gray-800">
 			<div class="flex max-w-3xl flex-col gap-4">
-				<!-- (8) Die Überschrift ist nicht groß und fett genug. -->
+				<!-- (1) Die Überschrift ist nicht groß und fett genug. -->
 				<h1>Dein Urlaub in den Malediven</h1>
 				<div class="flex">
 					<div class="flex flex-col gap-4">
@@ -106,8 +106,8 @@
 					</div>
 				</div>
 				<h2 class="text-2xl font-semibold">Angebote</h2>
-				<!-- (3) Die Angebote sollen eine andere Hintergrundfarbe bekommen als der Rest der Seite um sich abzuheben. -->
-				<!-- (4) Die Angebote sollen abgerundete Ecken haben für einen freundlicheren Look & Feel. -->
+				<!-- (2) Die Angebote sollen eine andere Hintergrundfarbe bekommen als der Rest der Seite um sich abzuheben. -->
+				<!-- (3) Die Angebote sollen abgerundete Ecken haben für einen freundlicheren Look & Feel. -->
 				<!-- (7) Die Angebote heben sich noch nicht genug ab. Sie sollen einen Pop-Out Effekt bekommen in dem sie einen Schatten werfen. -->
 				<ol class="flex flex-wrap gap-4">
 					<!-- (10) Das Angebot sieht nicht gut auf kleineren Bildschirmen aus. Kannst du das etwas optimieren? -->
@@ -210,21 +210,20 @@
   Tipps
 
   Suche nach der Nummer deiner Aufgabe.
+
   
+  (1) https://tailwindcss.com/docs/font-size
 
 
-  (1) Das Hintergrundbild scheint sich schon korrekt zu verhalten. Wieso? Kannst du die gleiche Technik für die Navbar benutzen?
+  (2) https://tailwindcss.com/docs/background-color
+
+  
+  (3) https://tailwindcss.com/docs/border-radius#rounded-corners
 
 
-  (2) Die Höhe der Elemente ist aktuell die des Inhalts. Versuche das Problem mit "h-..." Klassen zu lösen.
+  (4) Die Höhe der Elemente ist aktuell die des Inhalts. Versuche das Problem mit "h-..." Klassen zu lösen.
       Wenn du andere Ideen hast: Probier es einfach aus :)
       https://tailwindcss.com/docs/height
-
-
-  (3) https://tailwindcss.com/docs/background-color
-
-
-  (4) https://tailwindcss.com/docs/border-radius#rounded-corners
 
 
   (5) Siehe https://tailwindcss.com/docs/gradient-color-stops
@@ -237,7 +236,7 @@
   (7) https://tailwindcss.com/docs/box-shadow
 
 
-  (8) https://tailwindcss.com/docs/font-size
+  (8) Das Hintergrundbild scheint sich schon korrekt zu verhalten. Wieso? Kannst du die gleiche Technik für die Navbar benutzen?
 
 
   (9) https://tailwindcss.com/docs/hover-focus-and-other-states#focus
