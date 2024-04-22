@@ -3,11 +3,14 @@ name: Node.js CI
 on:
   push:
     branches: [master]
+    paths:
+      - index.css
+      - index.html
+      - tailwind.config.mjs
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
       - name: Reconfigure git to use HTTP authentication
@@ -22,19 +25,15 @@ jobs:
           registry-url: https://registry.npmjs.org
       - name: install
         run: cd presentation && npm ci
-      - name: build
-        run: cd presentation && npm run build
-      - name: deploy presentation
-        if: ${{ github.event_name == 'push' }}
+      - name: update-link
+        run: cd presentation && npm run update-tailwind-link
+      - name: commit-changes
         run: |
-          cd presentation
-          git init
           git config --global user.name $GITHUB_ACTOR
           git config --global user.email $GITHUB_ACTOR@users.noreply.github.com
-          git checkout -b gh-pages
-          git add -A
-          git commit -m "Deploy"
+          git add README.md
+          git commit -m "Update README play.tailwindcss link"
           git remote add origin https://anmolitor:$GITHUB_TOKEN@github.com/anmolitor/tailwind-workshop.git
-          git push -f --set-upstream origin gh-pages
+          git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
