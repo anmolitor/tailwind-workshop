@@ -203,7 +203,7 @@ TailwindCSS braucht etwas Gewöhnung aber bringt Vorteile:
 ## Let's try it out!
 
 - Browser: 
-  - Gehe auf https://play.tailwindcss.com/Q9JnmFGMBE
+  - Gehe auf https://play.tailwindcss.com/z7ue95o9ce
   - Aufgaben und Hints sind direkt im HTML
 - IDE: 
   - git clone https://github.com/anmolitor/tailwind-workshop
