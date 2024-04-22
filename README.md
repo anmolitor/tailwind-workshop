@@ -4,7 +4,7 @@
 
 Im Browser:
 
-- https://play.tailwindcss.com/BWV7Qy11uG
+- https://play.tailwindcss.com/Q9SJQ6siiu
 
 Intellij Ultimate:
 
