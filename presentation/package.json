@@ -5,8 +5,7 @@
 	"main": "index.js",
   "type": "module",
 	"scripts": {
-		"build": "marp Presentation.md --html -o index.html --theme-set theme/andrena-theme.css",
-    "update-tailwind-link": "node ./scripts/update-tailwind.js"
+		"build": "marp Presentation.md --html -o index.html --theme-set theme/andrena-theme.css"
 	},
 	"author": "",
 	"license": "ISC",
