@@ -3,7 +3,7 @@ import { readFile, writeFile } from 'fs/promises';
 const filesToUpdate = process.argv.slice(2);
 
 const html = await readFile('index.html', { encoding: 'utf-8' });
-const config = await readFile('tailwind.config.mjs', { encoding: 'utf-8' });
+const config = await readFile('tailwind.config.js', { encoding: 'utf-8' });
 const css = await readFile('index.css', { encoding: 'utf-8' });
 const response = await fetch('https://play.tailwindcss.com/api/share', {
 	headers: {
