@@ -1,11 +1,14 @@
-name: Node.js CI
+name: Deploy Presentation
 
 on:
   push:
     branches: [master]
     paths:
       - presentation/**
-
+  workflow_run:
+    workflows: ["Update Tailwind Link"]
+    types:
+      - completed
 jobs:
   build:
     runs-on: ubuntu-latest
