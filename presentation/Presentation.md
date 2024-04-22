@@ -202,6 +202,16 @@ TailwindCSS braucht etwas Gewöhnung aber bringt Vorteile:
 
 ## Let's try it out!
 
+- Browser: 
+  - Gehe auf https://play.tailwindcss.com/Zfqwks6mMS
+  - Aufgaben und Hints sind direkt im HTML
+- IDE: 
+  - git clone https://github.com/anmolitor/tailwind-workshop
+  - npm i
+  - npm start
+  - http://localhost:5173 öffnen
+  - Aufgaben und Hints sind direkt im HTML
+
 ---
 
 ## Project Setup

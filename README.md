@@ -17,7 +17,7 @@ Intellij Ultimate:
 
 Im Browser:
 
-- https://play.tailwindcss.com/nNqhE4PI8Y
+- https://play.tailwindcss.com/Zfqwks6mMS
 
 ## Presentation
 
