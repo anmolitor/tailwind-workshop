@@ -26,4 +26,4 @@ const updatedReadme = readme.replace(
 	/https:\/\/play.tailwindcss.com\/[a-zA-Z0-9]+/,
 	`https://play.tailwindcss.com/${ID}`
 );
-await writeFile('README.md', updatedReadme, { encoding: 'utf-8' });
+await writeFile('../README.md', updatedReadme, { encoding: 'utf-8' });
