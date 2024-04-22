@@ -30,7 +30,6 @@ jobs:
       - name: build
         run: cd presentation && npm run build
       - name: deploy presentation
-        if: ${{ github.event_name == 'push' }}
         run: |
           cd presentation
           git init
