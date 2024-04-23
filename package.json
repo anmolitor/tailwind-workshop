@@ -1,0 +1,15 @@
+{
+	"name": "presentation",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+  "type": "module",
+	"scripts": {
+		"build": "marp Presentation.md --html -o index.html --theme-set theme/andrena-theme.css"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@marp-team/marp-cli": "^3.4.0"
+	}
+}
