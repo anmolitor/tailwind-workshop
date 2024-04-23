@@ -7,7 +7,7 @@ paginate: true
 <!-- _backgroundImage: url('./theme/background.png') -->
 <!-- _backgroundPosition: auto -->
 
-# TailwindCSS
+<h1 style="color: white">TailwindCSS</h1>
 
 ---
 
